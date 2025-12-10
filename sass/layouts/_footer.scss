@@ -1,0 +1,15 @@
+@use "../base";
+
+
+/* Footer */
+footer {
+  background-color: base.$light-orange;
+  padding: 10px 0;
+  text-align: center;
+  a {
+    text-decoration-color: base.$dark-base;
+    color: base.$dark-base;
+    text-underline-offset: 4px;
+    font-weight: 500;
+  }
+}

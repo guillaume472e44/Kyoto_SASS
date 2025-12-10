@@ -1,0 +1,52 @@
+@use "../base";
+
+/* Global and utilities */
+body {
+  font-family: base.$base-font;
+  color: base.$dark-base;
+  background-color: base.$light-white;
+}
+button,
+input {
+  font-family: base.$base-font;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.main-heading {
+  font-size: base.$fs-72;
+  line-height: 1.1;
+  font-family: base.$accent-font;
+  color: base.$light-white;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  text-shadow: 0px 2px 0px base.$lighter-dark, 0px 4px 0px base.$lighter-dark;
+}
+
+.heading-2 {
+  font-size: base.$fs-40;
+  font-family: base.$accent-font;
+}
+.surtitle,
+.heading-2 {
+  text-align: center;
+}
+.surtitle {
+  color: base.$gray;
+  font-size: base.$fs-18;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: base.$fs-42;
+  }
+  .heading-2 {
+    font-size: base.$fs-26;
+  }
+  .surtitle {
+    font-style: base.$fs-16;
+  }
+}

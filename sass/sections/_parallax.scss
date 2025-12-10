@@ -1,0 +1,33 @@
+@use "../base";
+
+/* Parallax */
+.parallax {
+  min-height: 275px;
+  background-image: url(../assets/images/parallax-large-flou.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: base.$light-white;
+  &-text {
+    font-size: base.$fs-26;
+  }
+}
+.japanese-text {
+  font-size: base.$fs-64;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  .parallax {
+    min-height: 200px;
+    &-text {
+      font-style: base.$fs-18;
+    }
+  }
+  .japanese-text {
+    font-size: base.$fs-40;
+  }
+}

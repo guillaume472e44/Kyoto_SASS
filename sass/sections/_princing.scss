@@ -1,0 +1,142 @@
+@use "../base";
+
+/* Pricing section */
+.pricing {
+  padding: 44px 10px 136px;
+  background-image: base.$radial-white-beige;
+  .heading-2 {
+    margin-bottom: 64px;
+  }
+  &-card-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  &-card {
+    width: 275px;
+    min-height: 400px;
+    padding: 16px;
+    background-color: base.$light-orange;
+    border-radius: 8px;
+    border: base.$dark-thick-border;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  &-card h3 {
+    font-family: base.$accent-font;
+    font-size: base.$fs-26;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.plan {
+  &-line {
+    width: 100%;
+    margin: 0 10px;
+    height: 1px;
+    background-color: base.$dark-base;
+  }
+  &-price {
+    font-size: base.$fs-24;
+    font-family: base.$accent-font;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+.card-subtitle {
+  font-size: base.$fs-14;
+  margin-bottom: 24px;
+}
+
+.pricing-card {
+  ul {
+    margin-bottom: 32px;
+  }
+  li {
+    list-style-type: none;
+    display: flex;
+    font-weight: 500;
+  }
+  li:not(:last-of-type) {
+    margin-bottom: 14px;
+  }
+  li img {
+    width: 20px;
+    margin-right: 8px;
+  }
+  button {
+    margin-top: auto;
+    padding: 8px;
+    font-size: base.$fs-16;
+    font-weight: bold;
+    cursor: pointer;
+    border: base.$dark-thick-border;
+    border-radius: 4px;
+    background-color: base.$light-white;
+  }
+  button:hover {
+    color: base.$light-white;
+    background-color: base.$dark-base;
+  }
+}
+
+.c1 {
+  transform: translateY(8px) rotate(-7.5deg);
+}
+.c2 {
+  transform: translateY(-8px);
+  z-index: 2;
+}
+.c3 {
+  transform: translateY(8px) rotate(7.5deg);
+}
+.shadow {
+  display: flex;
+  margin: 16px auto 0;
+}
+
+@media (max-width: 900px) {
+  .pricing {
+    padding-bottom: 64px;
+    .heading-2 {
+      margin-bottom: 40px;
+    }
+    &-card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-card {
+      width: 100%;
+      max-width: 550px;
+      min-height: auto;
+      margin-bottom: 24px;
+    }
+    &-card h3 {
+      font-size: base.$fs-22;
+    }
+  }
+  .plan-price {
+    font-size: base.$fs-20;
+  }
+  .card-subtitle {
+    margin-bottom: 24px;
+  }
+  .pricing-card button {
+    padding: 5px;
+    font-size: base.$fs-14;
+  }
+  .c1,
+  .c2,
+  .c3 {
+    transform: none;
+  }
+  .c2 {
+    order: 3;
+  }
+  .shadow {
+    display: none;
+  }
+}

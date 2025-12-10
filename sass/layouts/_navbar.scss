@@ -1,0 +1,25 @@
+@use "../base";
+
+/* Navigation */
+nav {
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+  background-color: base.$light-orange;
+  padding: 12px 8px;
+  display: flex;
+  justify-content: center;
+  border-bottom: base.$light-dark-border;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: base.$dark-base;
+    margin: 0 24px;
+    font-size: base.$fs-14;
+  }
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}

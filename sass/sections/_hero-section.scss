@@ -1,0 +1,73 @@
+@use "../base";
+
+/* Hero Section */
+.hero-section {
+  padding: 144px 10px 10px;
+  min-height: 700px;
+  background-image: url(../assets/images/hero-background-semi-dark.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.hero-btn {
+  min-width: 176px;
+  padding: 8px;
+  border: none;
+  box-shadow: base.$solid-shadow;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  &-1 {
+    background-color: base.$light-white;
+    color: base.$lighter-dark;
+  }
+  &-1:hover {
+    background-color: base.$active-almond;
+  }
+  &-2 {
+    background-color: base.$crimson;
+    color: base.$light-white;
+  }
+  &-2:hover {
+    background-color: base.$active-crimson;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-size: base.$fs-14;
+    font-weight: 600;
+  }
+
+  img {
+    width: 20px;
+    margin-left: 12px;
+    filter: drop-shadow(base.$drop-shadow);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 550px;
+  }
+  .hero-btn {
+    min-width: 135px;
+    padding: 10px 12px;
+    span {
+      font-size: base.$fs-12;
+    }
+    img {
+      width: 14px;
+      margin-left: 8px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding-top: 96px;
+    min-height: 450px;
+  }
+}
